@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import shortid from "shortid";
 import propTypes from "prop-types";
 import css from "./Filter.module.css";
 
@@ -12,7 +11,6 @@ class Filter extends Component {
           onChange={this.props.onSearch}
           type="text"
           value={this.props.filter}
-          // id={this.inputFilterId}
         />
       </label>
     );
@@ -20,8 +18,7 @@ class Filter extends Component {
 }
 
 Filter.propTypes = {
-  filter: propTypes.string,
-  onSearch: propTypes.func,
+  onSearch: propTypes.func.isRequired,
 };
 
 export default Filter;
